@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register page</title>
+    <link rel="stylesheet" href="teacherRegister.css" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+</head>
+<body>
+<div class="wrapper">
+    <div class="title">
+        Registration Form
+    </div>
+    <form class="form" method="post" action="/labwork/register">
+        <div class="inputfield">
+            <label>First Name</label>
+            <input type="text" class="input" autocomplete="given-name" name="inputFirstName" required>
+        </div>
+        <div class="inputfield">
+            <label>Last Name</label>
+            <input type="text" class="input" autocomplete="family-name" name="inputLastName" required>
+        </div>
+        <div class="inputfield">
+            <label>Gender</label>
+            <div class="custom_select">
+                <select required name="selectGender">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputfield">
+            <label>Age</label>
+            <input type="number" class="input" name="inputAge" min="18" max="99" required>
+        </div>
+        <div class="inputfield">
+            <label>Professional post</label>
+            <div class="custom_select">
+                <select required name="selectProfPost">
+                    <option value="">Select</option>
+                    <option value="professor">Professor</option>
+                    <option value="lecturer">Lecturer</option>
+                    <option value="supervisor">Supervisor</option>
+                    <option value="teacher">Teacher</option>
+                </select>
+            </div>
+        </div>
+        <div class="inputfield">
+            <label>Department</label>
+            <div class="custom_select">
+                <select required name="selectDepartment">
+                    <option value="">Select</option>
+                    <option value="mathematical">Mathematical, Physical & Life Sciences Division</option>
+                    <option value="medical">Medical Sciences Division</option>
+                    <option value="social">Social Sciences Division</option>
+                    <option value="humanities">Humanities Division</option>
+                </select>
+            </div>
+        </div>
+        <fieldset class="fieldset" name="fieldsetComPartyMember">
+            <legend class="legend">Communist Party Member?</legend>
+            <input type="radio" class="radioGroup" id="radioYes" name="radioGroup" value="true" checked>
+            <label class="radioLabel" for="radioYes">Yes, I am!</label>
+            <input type="radio" class="radioGroup" id="radioNo" name="radioGroup" value="false">
+            <label class="radioLabel" for="radioNo">No, I am not</label>
+        </fieldset>
+        <fieldset class="fieldset" name="fieldsetLecturing">
+            <legend class="legend">Lecturing</legend>
+            <input type="checkbox" name="lecturingCheckbox" id="checkboxOne" value="mathematics" class="checkboxLecturing">
+            <label for="checkboxOne" class="checkLabel">Advanced Mathematics</label>
+            <input type="checkbox" name="lecturingCheckbox" id="checkboxTwo" value="english" class="checkboxLecturing">
+            <label for="checkboxTwo" class="checkLabel">College English</label>
+            <input type="checkbox" name="lecturingCheckbox" id="checkboxFour" value="physics" class="checkboxLecturing">
+            <label for="checkboxFour" class="checkLabel">Physics</label>
+            <input type="checkbox" name="lecturingCheckbox" id="checkboxThree" value="ssd" class="checkboxLecturing">
+            <label for="checkboxThree" class="checkLabel">Software System Development</label>
+        </fieldset>
+        <div class="inputfield">
+            <input type="submit" value="Register" class="btn">
+        </div>
+        <div class="inputfield">
+            <input type="reset" value="Start Over" class="btnReset">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
